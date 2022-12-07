@@ -49,7 +49,9 @@ function App() {
       <button disabled={clickedPoints.length === 0} onClick={handleUndoClick}>
         Undo
       </button>
-      <button onClick={handleRedoClick}>Redo</button>
+      <button disabled={undoPoints.length === 0} onClick={handleRedoClick}>
+        Redo
+      </button>
       <div className="App" onClick={getCordenatesClick}>
         {clickedPoints.map((clickedPoint, index) => {
           return (
